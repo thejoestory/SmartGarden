@@ -12,7 +12,7 @@ humidity, temperature = Adafruit_DHT.read_retry(sensor, pin)
 
 temperature = temperature * 9/5.0 + 32
 
-r = requests.get("http://www.thejoestory.com/SmartGarden/Service.asmx/LogTemp?sensorID=tempsensor1&temp=" + str(temperature) + "&humidity=" + str(humidity))
+r = requests.get("http://www.yourwebsite.com/SmartGarden/Service.asmx/LogTemp?sensorID=tempsensor1&temp=" + str(temperature) + "&humidity=" + str(humidity))
 print r.status_code
 
 t = datetime.datetime.now()
